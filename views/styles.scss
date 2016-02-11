@@ -1,0 +1,121 @@
+$red: #903;
+$black: #444;
+$white: #fff;
+$main-font: Helvetica, Arial, sans-serif;
+$wild_sand: #f4f4f4;
+$thistle: #d2dbbd;
+$color_coral_approx: #f97744;
+
+body {
+  font-family: $main-font;
+  background-color: $thistle;
+}
+
+h1 {
+  color: $red;
+  font: 32px/1 $main-font;
+}
+
+header h1 {
+  font-size: 40px;
+  line-height: 80px;
+  background: transparent url(/images/logo.png) 0 0 no-repeat;
+  padding-left: 84px;
+}
+
+@mixin tabs ($background: blue, $color: yellow) {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: $background;
+    overflow: hidden;
+	}
+	li {
+	   float: left;
+	 }
+	a { 
+		text-decoration: none; display: block;
+		padding: 8px; background: $background; color: $color;
+		&:hover {
+      background: darken($background, 20%);
+  	}
+	} 
+}
+
+nav {
+  @include tabs ($background: $black, $color: $white);
+  font-weight: bold;
+}
+
+p {
+	font: 13px/1.4 $main-font;
+  font-weight:bold;
+}
+
+#gallerypage {
+  width: 630px;
+  height: 450px;
+  padding-top: 2px;
+  padding-left: 15px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: $black;
+  h1 {
+    color: $wild_sand;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+div {
+  &.shots {
+    margin: 10px;
+    border: 1px solid $white;
+    float: left;
+    width: 180px;
+    &:hover {
+      border: 1px solid $color_coral_approx;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &.details {
+    padding: 5px;
+    text-align: left;
+    background-color: $black;
+    color: $white;
+    font-size: 14px;
+  }
+}
+
+#contactpage {
+  padding-top: 2px;
+  padding-left: 15px;
+  width: 630px;
+  height: 450px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: $black;
+  color: $white;
+  h1 {
+    color: $wild_sand;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+#contactform {
+  padding-left: 20px;
+  padding-bottom: 40px;
+}
+
+#lastdata {
+  padding-top: 15px;
+  text-align: center;
+}
